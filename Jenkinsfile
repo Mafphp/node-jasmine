@@ -1,9 +1,13 @@
 pipeline {
-    agent any
+     agent {
+        node {
+            label 'master'
+        }
+    }
     stages {
         stage('build') {
             steps {
-                echo 'hello master'
+                sh 'node ./scripts/index.js'
             }
         }
     }
