@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh 'printenv'
                 sh 'node ./scripts/index.js'
             }
         }
