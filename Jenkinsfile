@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'echo "hello jenkins world"'
+                sh 'echo "hello jenkins world12"'
             }
         }
     }
