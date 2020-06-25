@@ -1,14 +1,9 @@
 pipeline {
-     agent {
-        node {
-            label 'master'
-        }
-    }
+    agent { docker { image 'node:6.3' } }
     stages {
         stage('build') {
             steps {
-                sh 'printenv'
-                sh 'node ./scripts/index.js'
+                sh 'npm --version'
             }
         }
     }
