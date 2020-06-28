@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+                console.log('aaaaaaa')
                 bat 'echo "Fail!"; exit 1'
             }
         }
